@@ -19,3 +19,5 @@ def factorise(n) :
 factorise(6936)
 factorise(86400000)
 factorise(7919) # priemgetal
+invoer = int(input('Voer een getal in: '))
+factorise(invoer)
