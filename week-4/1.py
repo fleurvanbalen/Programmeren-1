@@ -41,7 +41,7 @@ def is_leapyear(Y): # Deze functie bepaalt of jaar Y een schrikkeljaar is (geeft
 
 def days_in_month(Y): # Functie die een list geeft met het aantal dagen voor de maanden (index begint met 0, dus voor januari: days_in_month(Y)[0])
     days_in_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-    if is_leapyear(Y) == True:
+    if is_leapyear(Y):
         days_in_month[1] = 29 # Als Y een schrikkeljaar is heeft feb 29 dagen
     return days_in_month
 
