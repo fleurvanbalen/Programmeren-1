@@ -46,10 +46,9 @@ def days_in_month(Y): # Functie die een list geeft met het aantal dagen voor de 
     return days_in_month
 
 def day_number_in_year(d,m,Y): # Geeft de dag in het jaar voor een bepaalde dag in de maand (d), maand (m) en jaar (Y)
-    day_number = 0
+    day_number = d # Het aantal dagen in de huidige maand
     for i in range(m - 1): # De laatste maand moet niet worden opgeteld dus m - 1
         day_number += days_in_month(Y)[i] # Telt voor alle voorgaande maanden de dagen op
-    day_number += d # Telt de dagen in de huidige maand erbij op
     return day_number
 
 def month_in_year_of_day_number(day_n,Y): # Geeft de maand voor een bepaalde dag in het jaar (day_n) en jaar (Y)
@@ -58,7 +57,6 @@ def month_in_year_of_day_number(day_n,Y): # Geeft de maand voor een bepaalde dag
         day_n -= days_in_month(Y)[i]   # wordt het aantal dagen in de maand eraf gehaald,
         i += 1                         # en gaat ie naar de volgende maand.
     return i + 1                       # Omdat de index met 0 begint ipv 1
-        
 
 def day_in_month_of_day_number(day_n,Y): # Geeft de dag in de maand voor een bepaalde dag in het jaar (day_n) en jaar (Y)
     for i in range(month_in_year_of_day_number(day_n, Y) - 1): 
