@@ -2,7 +2,7 @@
 # De coordinaten van de waardes van doorlaatbaarheid zijn dus x: eerste waarde en y: kolomnummer
 fdataoud = open("Week6_data.txt")
 fdatanieuw = open("W6_data_netjes.txt", "w+")
-print('golfgetal\ttransmissie', file=fdatanieuw)
+#print('golfgetal\ttransmissie', file=fdatanieuw)
 for n in range(4097):
     line = fdataoud.readline()
     splitline = line.split()
