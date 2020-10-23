@@ -17,3 +17,11 @@ def alt_bubblesort(lst):
 print(bubblesort([5,8,3,2]))
 
 print(alt_bubblesort([5,8,3,2]))
+
+try:
+    a = int('.')
+    print(a)
+except:
+    print('nope')
+
+a = int('.')
